@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  /*C'est de la trichouille ici*/
+  overflow-y: hidden;
+  transform: scale(0.75);
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -o-transform: scale(0.75);
+}
+
+#gameBoard {
+  margin: auto;
+  height: 800px;
+  width: 800px;
+  border: 25px solid #1e272e;
+  background: #808e9b;
+  position: relative;
+}
+
+#player {
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  background: #ffdd59;
+  position: absolute;
+  top: 350px;
+  left: 350px;
+}
+
+
+.ennemi
+{
+
+    height: 50px;
+    width:  50px;
+    background-color: #ff9f43;
+    border: solid 1px;
+    color: red;
+    position: absolute;
+
+    text-align: center;
+}
+.ennemi:nth-child(2)
+ {
+    height: 50px;
+    width:  50px;
+    top: 100px;
+    left: 500px;
+    background-color: #ff9f43;
+    border: solid 1px;
+    color: red;
+    position: absolute;
+    text-align: center;
+  }
+  
+.ennemi:nth-child(3)
+{
+    height: 50px;
+    width:  50px;
+    top: 500px;
+    left: 100px;
+    background-color: #ff9f43;
+    border: solid 1px;
+    color: red;
+    position: absolute;
+    text-align: center;
+}
+  
+.ennemi:nth-child(4)
+{
+    height: 50px;
+    width:  50px;
+    top: 150px;
+    left: 500px;
+    background-color: #ff9f43;
+    border: solid 1px;
+    color: red;
+    position: absolute;
+    text-align: center;
+}
+
+
+.bomb {
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    background: #ff5e57;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: blink 1s reverse infinite;
+    -webkit-animation: blink 1s reverse infinite;
+}
+  
+  .explosion {
+    z-index: 4;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: #cd6133;
+  }
+  
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+p{
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  float: left;
+
+}
+span#vie{
+
+color: rgb(3, 241, 15);
+  }
+
+#img{
+  
+    display: none;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%)  ;
+    -webkit-transform:translate(-50%, -50%)  ;
+    -moz-transform:translate(-50%, -50%)  ;
+    -ms-transform:translate(-50%, -50%)  ;
+    -o-transform:translate(-50%, -50%)  ;
+    z-index: 9;
+}
